@@ -25,6 +25,12 @@ $canChange  = $user->authorise('core.edit.state', 'com_tgmag');
 $canDelete  = $user->authorise('core.delete', 'com_tgmag');
 ?>
 
+<?php if ( $this->params->get('show_page_heading')!=0) : ?>
+    <h1>
+<?php echo $this->escape($this->params->get('page_heading')); ?>
+    </h1>
+<?php endif; ?>
+
 <form action="<?php echo JRoute::_('index.php?option=com_tgmag&view=prodotti'); ?>" method="post"
       name="adminForm" id="adminForm">
 

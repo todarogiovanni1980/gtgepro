@@ -1,0 +1,18 @@
+<update>
+   <name>Gestione Magazzino</name>
+   <description>Sistema di gestione magazzino semplice</description>
+   <element>com_tgmag</element>
+   <type>component</type>
+   <version>0.1</version>
+   <infourl title="Gestione Magazzino Semplice">https://github.com/todarogiovanni1980/gtgepro</infourl>
+   <downloads>
+       <downloadurl type="full" format="zip">https://github.com/todarogiovanni1980/gtgepro/archive/master.zip</downloadurl>
+   </downloads>
+
+   <maintainer>Todaro Giovanni</maintainer>
+   <maintainerurl>http://www.todarogiovanni.it</maintainerurl>
+   <tags>
+     <tag>stable</tag>
+   </tags>
+   <targetplatform name="joomla" version="3.6"/>
+</update>

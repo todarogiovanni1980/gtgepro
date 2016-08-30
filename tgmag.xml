@@ -2,12 +2,12 @@
 <extension type="component" version="3.0" method="upgrade">
     <name>com_tgmag</name>
     <creationDate>2016-07-29</creationDate>
-    <copyright>2016 Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</copyright>
+    <copyright>2016 Todaro Giovanni</copyright>
     <license>GNU General Public License versione 2 o successiva; vedi LICENSE.txt</license>
-    <author>Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</author>
-    <authorEmail>giovanni.todaro@itd.cnr.it</authorEmail>
-    <authorUrl>http://www.pa.itd.cnr.it</authorUrl>
-    <version>CVS: 1.0.0</version>
+    <author>Todaro Giovanni - Perito Industriale Specializzato in Elettronica e Telecomunicazioni</author>
+    <authorEmail>info@todarogiovanni.it</authorEmail>
+    <authorUrl>http://www.todarogiovanni.it</authorUrl>
+    <version>0.1.0</version>
     <description>Gestione magazzino</description>
     
     <scriptfile>script.php</scriptfile>
@@ -89,4 +89,8 @@
     <modules>
 		<module module="mod_tgmag" />
 	</modules>
+	
+	 <updateservers>
+    <server type="extension" priority="2" name="Gestione Magazzino Semplice">https://github.com/todarogiovanni1980/gtgepro/archive/master/extension.xml</server>
+ </updateservers>
 </extension>

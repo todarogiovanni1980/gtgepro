@@ -14,7 +14,24 @@ if (!$canEdit && JFactory::getUser()->authorise('core.edit.own', 'com_tgmag')) {
 	$canEdit = JFactory::getUser()->id == $this->item->created_by;
 }
 ?>
-<?php if ($this->item) : ?>
+
+
+<?php if ( $this->params->get('show_page_heading')!=0) : ?>
+    <h1>
+Prodotto
+    </h1>
+<?php endif; ?>
+
+<?php if ($this->item) : 
+	
+	$app = JFactory::getApplication();
+		
+	$pathway = $app->getPathway();
+	$pathway->addItem($this->item->descrizione, '');
+	
+?>
+
+<h2><?php echo $this->item->descrizione; ?></h2>
 
 	<div class="item_fields">
 		<table class="table">

@@ -132,10 +132,65 @@ class TgmagTableprodotto extends JTable
 	 */
 	public function check()
 	{
+		
+		$app  = JFactory::getApplication();
+		$this->params = $app->getParams('com_tgmag');
+		$grp = $this->params->get('email');
+		
 		// If there is an ordering column and this is a new row then get the next ordering value
 		if (property_exists($this, 'ordering') && $this->id == 0)
-		{
+		{ 
 			$this->ordering = self::getNextOrder();
+		}		
+		
+		$qua = $this->quantita;
+		$soglia = $this->soglia;
+		
+		if ($qua<=$soglia) {
+			//invia mail di notifica	
+			
+			//Fetch the Mail Object
+			$mailer = JFactory::getMailer();
+			
+			//Set a Sender
+			$config = JFactory::getConfig();
+			$sender = array( 
+			    $config->get( 'mailfrom' ),
+			    $config->get( 'fromname' ) 
+			);
+			 
+			$mailer->setSender($sender);
+						
+			// Get users in the group out of the ACL
+			$usersByGroup   = JAccess::getUsersByGroup(8);
+			
+			$recipient = array();
+			foreach ($usersByGroup as $id)
+			{
+			    $user = JFactory::getUser($id);			   
+			    array_push($recipient, $user->email) ;
+			}			
+			 
+			$mailer->addRecipient($recipient);	
+			
+			
+			//Create the Mail
+			$body   = "Notifica della raggiungimento della soglia per " . $this->descrizione. " sono rimasti $qua la soglia è $soglia";
+			$mailer->setSubject('Notifica sotto soglia...');
+			$mailer->setBody($body);
+					
+			//Sending the Mail
+			$send = $mailer->Send();
+			if ( $send !== true ) {
+			    echo 'Errore nella spedizione della mail: ' . $send->__toString();
+			} else {
+			    echo 'Mail inviata';
+			}
+					
+			JFactory::getApplication()->enqueueMessage("Quantità rimaste: $qua", "warning");   
+										
+		} else {
+			JFactory::getApplication()->enqueueMessage("Quantità rimaste: $qua");   					
 		}
 		
 		
