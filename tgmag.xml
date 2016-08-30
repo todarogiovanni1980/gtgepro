@@ -4,10 +4,10 @@
     <creationDate>2016-07-29</creationDate>
     <copyright>2016 Todaro Giovanni</copyright>
     <license>GNU General Public License versione 2 o successiva; vedi LICENSE.txt</license>
-    <author>Todaro Giovanni - Perito Industriale Specializzato in Elettronica e Telecomunicazioni</author>
+    <author>Todaro Giovanni</author>
     <authorEmail>info@todarogiovanni.it</authorEmail>
     <authorUrl>http://www.todarogiovanni.it</authorUrl>
-    <version>0.2.0</version>
+    <version>1.0.0</version>
     <description>Gestione magazzino</description>
     
     <scriptfile>script.php</scriptfile>
