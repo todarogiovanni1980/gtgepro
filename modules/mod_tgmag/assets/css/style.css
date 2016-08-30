@@ -1,0 +1,38 @@
+/**
+ * @version     CVS: 1.0.0
+ * @package     com_tgmag
+ * @subpackage  mod_tgmag
+ * @copyright   2016 Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche
+ * @license     GNU General Public License versione 2 o successiva; vedi LICENSE.txt
+ * @author      Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche <giovanni.todaro@itd.cnr.it>
+ */
+
+.field_name{
+    width: 16.66666666666667%;
+    display: inline-block;
+    float: left;
+}
+
+.field_value{
+    width: 83.33333333333333%;
+    display: inline-block;
+    float:left;
+}
+
+.table{
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.table tr{
+    border: none;
+}
+
+.table td, .table th{
+    padding: 8px;
+    line-height: 18px;
+    text-align: left;
+    vertical-align: top;
+    border: none;
+    border-top: 1px solid #ddd;
+}

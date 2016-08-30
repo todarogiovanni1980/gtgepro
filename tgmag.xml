@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_tgmag</name>
+    <creationDate>2016-07-29</creationDate>
+    <copyright>2016 Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</copyright>
+    <license>GNU General Public License versione 2 o successiva; vedi LICENSE.txt</license>
+    <author>Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</author>
+    <authorEmail>giovanni.todaro@itd.cnr.it</authorEmail>
+    <authorUrl>http://www.pa.itd.cnr.it</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>Gestione magazzino</description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>tgmag.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_tgmag" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_tgmag.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_tgmag.ini</language>
+    </languages>
+    <administration>
+        <menu img="media/com_tgmag/images/s_com_tgmag.png" >COM_TGMAG</menu>
+        <submenu>
+            
+			<menu link="option=com_tgmag&amp;view=prodotti" view="prodotti" img="media/com_tgmag/images/s_prodotti.png" alt="Tgmag/Prodotti">COM_TGMAG_TITLE_PRODOTTI</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>tgmag.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_tgmag.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_tgmag.sys.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_tgmag.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_tgmag.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="tgmag"/>
+    </plugins>
+    <modules>
+		<module module="mod_tgmag" />
+	</modules>
+</extension>

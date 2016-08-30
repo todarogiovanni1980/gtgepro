@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search">
+    <name>plg_search_tgmag</name>
+    <author>Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</author>
+    <creationDate>2016-07-29</creationDate>
+    <copyright>2016 Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</copyright>
+    <license>GNU General Public License versione 2 o successiva; vedi LICENSE.txt</license>
+    <authorEmail>giovanni.todaro@itd.cnr.it</authorEmail>
+    <authorUrl>http://www.pa.itd.cnr.it</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>PLG_SEARCH_COM_TGMAG_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="tgmag">tgmag.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="../../../languages/site/search/tgmag">
+        
+			<language tag="en-GB">../../../languages/plugins/search/tgmag/en-GB/en-GB.plg_search_tgmag.ini</language>
+			<language tag="en-GB">../../../languages/plugins/search/tgmag/en-GB/en-GB.plg_search_tgmag.sys.ini</language>
+			<language tag="it-IT">../../../languages/plugins/search/tgmag/it-IT/it-IT.plg_search_tgmag.ini</language>
+			<language tag="it-IT">../../../languages/plugins/search/tgmag/it-IT/it-IT.plg_search_tgmag.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="search_limit" type="text" default="50" size="5"
+                       description="PLG_SEARCH_COM_TGMAG_FIELD_SEARCHLIMIT_DESC"
+                       label="PLG_SEARCH_COM_TGMAG_FIELD_SEARCHLIMIT_LABEL" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

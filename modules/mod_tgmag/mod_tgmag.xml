@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+    <name>MOD_TGMAG_NAME</name>
+    <creationDate>2016-07-29</creationDate>
+    <copyright>2016 Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</copyright>
+    <license>GNU General Public License versione 2 o successiva; vedi LICENSE.txt</license>
+    <author>Todaro Giovanni - Consiglio Nazionale delle Ricerche -  Istituto per le Tecnologie Didattiche</author>
+    <authorEmail>giovanni.todaro@itd.cnr.it</authorEmail>
+    <authorUrl>http://www.pa.itd.cnr.it</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>MOD_TGMAG_DESCRIPTION</description>
+    
+    <files>
+        <filename module="mod_tgmag">mod_tgmag.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="../../languages/modules/mod_tgmag">
+        
+			<language tag="en-GB">en-GB/en-GB.mod_tgmag.ini</language>
+			<language tag="en-GB">en-GB/en-GB.mod_tgmag.sys.ini</language>
+			<language tag="it-IT">it-IT/it-IT.mod_tgmag.ini</language>
+			<language tag="it-IT">it-IT/it-IT.mod_tgmag.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset 
+                name="content_type" 
+                label="MOD_TGMAG_CONTENT_TYPE_TAB_LBL"
+                description="MOD_TGMAG_CONTENT_TYPE_TAB_DESC">
+                <field
+                    name="content_type" type="list"
+                    label="MOD_TGMAG_CONTENT_TYPE_LBL"
+                    description="MOD_TGMAG_CONTENT_TYPE_DESC">
+                    <option value="blank">MOD_TGMAG_CUSTOM_CONTENT</option>
+                    <option value="list">MOD_TGMAG_LIST</option>
+                    <option value="item">MOD_TGMAG_ITEM</option>
+                </field>
+            </fieldset>
+            <fieldset 
+                name="blank_content" 
+                label="MOD_TGMAG_CUSTOM_CONTENT_TAB_LBL"
+                description="MOD_TGMAG_CUSTOM_CONTENT_TAB_DESC">
+                <field 
+                    name="html_content" type="editor" filter="safehtml"
+                    label="MOD_TGMAG_HTML_LBL"
+                    description="MOD_TGMAG_HTML_DESC" />
+            </fieldset>
+            <fieldset 
+                name="list_content" 
+                label="MOD_TGMAG_LIST_CONTENT_TAB_LBL"
+                description="MOD_TGMAG_LIST_CONTENT_TAB_DESC">
+                <field
+                    name="table" type="list"
+                    label="MOD_TGMAG_TABLE_LBL"
+                    description="MOD_TGMAG_TABLE_DESC">
+                    
+	<option value="#__tgmag_prodotti">#__tgmag_prodotti</option>
+                </field>
+                <field 
+                    name="field" type="groupedlist" default=""
+                    label="MOD_TGMAG_FIELD_LBL"
+                    description="MOD_TGMAG_FIELD_DESC">
+                    
+	<group label="#__tgmag_prodotti">
+		<option value="id">id</option>
+		<option value="created_by">created_by</option>
+		<option value="modified_by">modified_by</option>
+		<option value="descrizione">descrizione</option>
+		<option value="quantita">quantita</option>
+		<option value="soglia">soglia</option>
+	</group>
+                </field>
+                <field 
+                    name="offset" type="text" default="0" filter="uint" class="input-small"
+                    label="MOD_TGMAG_OFFSET_LBL"
+                    description="MOD_TGMAG_OFFSET_DESC" />
+                <field 
+                    name="limit" type="text" default="10" filter="uint" class="input-small"
+                    label="MOD_TGMAG_LIMIT_LBL"
+                    description="MOD_TGMAG_LIMIT_DESC" />
+            </fieldset>
+            <fieldset 
+                name="item_content" 
+                label="MOD_TGMAG_ITEM_CONTENT_TAB"
+                description="MOD_TGMAG_ITEM_CONTENT_TAB_DESC">
+                <field
+                    name="item_table" type="list"
+                    label="MOD_TGMAG_TABLE_LBL"
+                    description="MOD_TGMAG_TABLE_DESC">
+                    
+	<option value="#__tgmag_prodotti">#__tgmag_prodotti</option>
+                </field>
+                <field 
+                    name="item_id" type="text" filter="uint" class="input-small"
+                    label="MOD_TGMAG_ITEM_ID_LBL"
+                    description="MOD_TGMAG_ITEM_ID_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
