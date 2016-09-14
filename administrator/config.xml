@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
     <fieldset label="COM_TGMAG" name="tgmag">
-        <field name="email" type="accesslevel" label="COM_TGMAG_FORM_LBL_EMAIL" description="COM_TGMAG_FORM_DESC_EMAIL" hint="COM_TGMAG_FORM_LBL_EMAIL"/>
+        <field name="email" type="usergroup" label="COM_TGMAG_FORM_LBL_EMAIL" description="COM_TGMAG_FORM_DESC_EMAIL" hint="COM_TGMAG_FORM_LBL_EMAIL"/>
 
     </fieldset>
 
