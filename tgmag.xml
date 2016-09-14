@@ -7,7 +7,7 @@
     <author>Todaro Giovanni</author>
     <authorEmail>info@todarogiovanni.it</authorEmail>
     <authorUrl>http://www.todarogiovanni.it</authorUrl>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>Gestione magazzino</description>
     
     <scriptfile>script.php</scriptfile>
