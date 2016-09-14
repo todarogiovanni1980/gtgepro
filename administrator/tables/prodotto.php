@@ -162,7 +162,7 @@ class TgmagTableprodotto extends JTable
 			$mailer->setSender($sender);
 						
 			// Get users in the group out of the ACL
-			$usersByGroup   = JAccess::getUsersByGroup(8);
+			$usersByGroup   = JAccess::getUsersByGroup($grp);
 			
 			$recipient = array();
 			foreach ($usersByGroup as $id)
