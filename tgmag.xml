@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.0" method="upgrade">
     <name>com_tgmag</name>
-    <creationDate>2016-07-29</creationDate>
+    <creationDate>2016-09-14</creationDate>
     <copyright>2016 Todaro Giovanni</copyright>
     <license>GNU General Public License versione 2 o successiva; vedi LICENSE.txt</license>
     <author>Todaro Giovanni</author>
